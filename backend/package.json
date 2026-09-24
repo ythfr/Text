@@ -8,7 +8,9 @@
   },
   "devDependencies": {
     "@types/jest": "latest",
+    "@types/node": "latest",
     "jest": "latest",
+    "ts-jest": "latest",
     "typescript": "latest"
   }
 }
