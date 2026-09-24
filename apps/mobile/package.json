@@ -10,6 +10,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@supabase/supabase-js": "latest",
     "expo": "latest",
     "expo-router": "latest",
     "react": "latest",
