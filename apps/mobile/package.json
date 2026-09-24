@@ -1,0 +1,10 @@
+{
+  "name": "@vision-one/mobile",
+  "private": true,
+  "version": "0.1.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android"
+  }
+}
