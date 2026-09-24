@@ -10,7 +10,7 @@ Completed on `feature/vision-one-v1-foundation`:
 - Jest configuration and ledger/payment tests
 - Supabase schema for profiles, wallets, currencies, transactions, ledger, rates, and audit logs
 - Signup trigger that provisions five wallets
-- Atomic simulated deposit function with idempotency and ledger-balance validation
+- Atomic simulated deposit and withdrawal functions with idempotency and ledger-balance validation
 - RLS baseline policies
 - Payment provider interface and `MockPaymentProvider`
 
@@ -22,7 +22,7 @@ Create a Supabase project, then apply migrations in order:
 supabase db push
 ```
 
-Keep required environment variables outside Git:
+Required environment variables must stay outside Git:
 
 ```text
 EXPO_PUBLIC_SUPABASE_URL=
@@ -32,7 +32,7 @@ SUPABASE_SERVICE_ROLE_KEY=   # backend only; never mobile
 
 ## Step 3 — Authentication
 
-Configure email/password authentication in Supabase. Registration creates the Auth user; the database trigger creates the profile and KES/USD/EUR/GBP/JPY wallets.
+Configure email/password authentication in Supabase. Registration must create the Auth user; the database trigger then creates the profile and KES/USD/EUR/GBP/JPY wallets.
 
 ## Step 4 — Financial operations
 
@@ -44,6 +44,7 @@ All deposit, withdrawal, transfer, exchange, and payment operations must be serv
 - [ ] Confirm signup creates one profile and five wallets
 - [ ] Confirm duplicate idempotency keys return the original result
 - [ ] Confirm simulated deposits create balanced ledger entries
+- [ ] Confirm simulated withdrawals reject insufficient funds
 - [ ] Confirm direct client balance updates are denied by RLS
 - [ ] Run backend typecheck and tests
 - [ ] Add transfer and exchange functions
