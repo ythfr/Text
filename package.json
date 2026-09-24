@@ -1,0 +1,11 @@
+{
+  "name": "vision-one",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vision One simulated multi-currency wallet",
+  "workspaces": ["apps/mobile", "backend"],
+  "scripts": {
+    "test": "npm run test --workspace backend",
+    "typecheck": "npm run typecheck --workspace backend"
+  }
+}
