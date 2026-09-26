@@ -1,0 +1,16 @@
+{
+  "name": "@vision-one/backend",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test": "jest --runInBand",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "jest": "latest",
+    "ts-jest": "latest",
+    "typescript": "latest"
+  }
+}
